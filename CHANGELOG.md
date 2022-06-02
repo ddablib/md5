@@ -1,33 +1,28 @@
-; ------------------------------------------------------------------------------
-; This Source Code Form is subject to the terms of the Mozilla Public License,
-; v. 2.0. If a copy of the MPL was not distributed with this file, You can
-; obtain one at http://mozilla.org/MPL/2.0/
-;
-; Copyright (C) 2013-2014, Peter Johnson (www.delphidabbler.com).
-;
-; Change Log for MD5 Message Digest Unit
-; ------------------------------------------------------------------------------
+# Change Log for MD5 Message Digest Unit
 
-Release v1.1.1 of 11 January 2014
+## v1.1.1 of 11 January 2014
+
 + Fixed problem with compiler directives in MD5 Message Digest unit and its DUnit test unit that was causing compilation to fail on Delphi XE5.
 + Minor documentation tweaks and corrections.
 
-Release v1.1 of 22 January 2013
+## v1.1 of 22 January 2013
+
 + Made unit compatible with Delphi Windows 64 bit compiler by fixing bug that was causing an assertion failure on 64 bit compiler when adding data from an untyped constant to MD5 hash.
 + Fixed bug in code that raised exception when getting hash of empty ANSI strings, Wide strings (not Unicode) and zero length untyped buffers.
 + Data from untyped buffers is now processed in chunks rather than all at once. Chunk size is determined by DefReadBufferSize constant or ReadBufferSize property.
 + Some refactoring.
 + Changes to DUnit tests:
-  - Removed conditional code for compiling tests as console application from command line. Only creating a GUI program via the IDE is now supported.
-  - Test projects will now compile to 32 bit or 64 bit Windows targets on Delphi XE2 or later.
-  - Added manifest to resources to request themed controls and set elevation level.
-  - Changed program icon to Delphi XE3 default.
+  + Removed conditional code for compiling tests as console application from command line. Only creating a GUI program via the IDE is now supported.
+  + Test projects will now compile to 32 bit or 64 bit Windows targets on Delphi XE2 or later.
+  + Added manifest to resources to request themed controls and set elevation level.
+  + Changed program icon to Delphi XE3 default.
 + Licensing changes:
-  - Unit license changed to Mozilla Public License v2.0 from from MPL / GPL / LGPL tri-license.
-  - All test code now placed in public domain.
+  + Unit license changed to Mozilla Public License v2.0 from from MPL / GPL / LGPL tri-license.
+  + All test code now placed in public domain.
 + Revised documentation, updated license information and changed link to online help.
 
-Release v1.0 of 18 July 2011
+## v1.0 of 18 July 2011
+
 + Added new Calculate and Process overloads to TPJMD5 that take ShortString and WideString parameters.
 + Fixed potential bugs in passing nil parameters to some TPJMD5's Process and Calculate methods.
 + Made TPJMD5.DefReadBufferSize constant public.
@@ -38,7 +33,8 @@ Release v1.0 of 18 July 2011
 + Revised and completed XMLDoc comments.
 + Updated documentation.
 
-Release v0.3 beta of 05 November 2010
+## v0.3 beta of 05 November 2010
+
 + Added new Process and Calculate method overloads to TPJMD5 that process a specified number of bytes from a given start index in a byte array.
 + Modified internal Update method to support the new method overloads and made some minor changes to other methods.
 + Fixed error in DUnit test project that prevented it compiling as a console application.
@@ -47,9 +43,11 @@ Release v0.3 beta of 05 November 2010
 + Corrected and updated XMLDoc comments.
 + Updated documentation.
 
-Release v0.2 beta of 21 July 2010
+## v0.2 beta of 21 July 2010
+
 + Changed AnsiString overloads of TPJMD5.Calculate and TPJMD5.Process methods to take RawByteString parameter instead.
 + Updated DUnit tests re changes in TPJMD5.
 
-Release v0.1 beta of 17 March 2010
+## v0.1 beta of 17 March 2010
+
 + Initial beta release.
