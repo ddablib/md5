@@ -1,340 +1,60 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!--
- * This Source Code Form is subject to the terms of the Mozilla Public License,
- * v. 2.0. If a copy of the MPL was not distributed with this file, You can
- * obtain one at http://mozilla.org/MPL/2.0/
- *
- * Copyright (C) 2010-2014, Peter Johnson (www.delphidabbler.com).
- *
- * Read-me file for MD5 Message Digest Unit
--->
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+# MD5 Message Digest Unit
 
-<head>
+## Description
 
-<title>
-  DelphiDabbler MD5 Message Digest Unit ReadMe
-</title>
+This unit contains an implementation of the MD5 message digest algorithm. It is implemented as a Delphi Class named _TPJMD5_.
 
-<style type="text/css">
-  body {
-    margin: 1em;
-    padding: 0;
-    font-family: Verdana, Arial, sans-serif;
-    font-size: 9pt;
-    line-height: 150%;
-  }
-  h1 {
-    margin: 0 0 1em 0;
-    padding: 0.5em;
-    border: 1px silver solid;
-    background-color: #eee;
-    font-size: 13pt;
-    font-weight: bold;
-    text-align: center;
-  }
-  h1 .subtitle {
-    font-style: italic;
-    color: #336;
-  }
-  h2 {
-    margin: 1em 0 0 0;
-    padding: 0;
-    padding-bottom: 6px;
-    border-bottom: 1px silver solid;
-    font-size: 11pt;
-    font-weight: bold;
-  }
-  h3 {
-    margin: 0.5em 0 0 0;
-    padding: 0;
-    font-size: 9pt;
-    font-weight: bold;
-  }
-  p {
-    margin: 0.5em 0 0 0;
-    padding: 0;
-  }
-  ul, ol {
-    margin: 0.5em 0 0 3em;
-    padding: 0;
-  }
-  ul {
-    list-style-type: square;
-  }
-  ul.spaced li,
-  ol.spaced li {
-    margin-top: 0.5em;
-  }
-  ul.spaced li,
-  ol.spaced li {
-    margin-top: 0.5em;
-  }
-  ul.unspaced li,
-  ol.unspaced li {
-    margin-top: 0;
-  }
-  ul.unspaced li.first,
-  ol.unspaced li.first {
-    margin-top: 0.5em;
-  }
-  code {
-    font-family: "Courier New", Courier, monospace;
-  }
-  a:link {
-    color: #336;
-    text-decoration: underline;
-  }
-  a:visited {
-    color: #669;
-    text-decoration: underline;
-  }
-  a:active {
-    color: #336;
-    text-decoration: underline;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  .pullout {
-    border-left: 8px silver solid;
-    background-color: #eee;
-    margin: 0.5em 0 0 0;
-    padding: 0.25em 0.5em;
-    font-style: italic;
-  }
-  .indent {
-    margin-left: 3em;
-  }
-  .highlight {
-    color: #336;
-    font-style: italic;
-    font-weight: bold;
-  }
-  .endnotes {
-    margin: 1.5em 0 0 0;
-    padding: 1em 0 0 0;
-    border-top: 1px silver solid;
-  }
-  .comments {
-    font-style: italic;
-  }
-  .copyright,
-  .copyright a:link,
-  .copyright a:visited,
-  .copyright a:active {
-    margin: 1em 0 0 0;
-    color: gray;
-    font-size: 8pt;
-    text-align: right;
-  }
-</style>
+The code is developed from scratch based on the algorithm presented in [RFC 1321](http://www.faqs.org/rfcs/rfc1321.html). Portions of the code are translated from the reference C code supplied in the RFC. However the code is not a literal translation into Pascal from the reference code.
 
-</head>
+The algorithm and reference code are copyright © 1991-2, RSA Data Security, Inc. Created 1991. All rights reserved.
 
-<body>
+For full details please see the [online documentation](https://delphidabbler.com/url/md5-docs).
 
-<h1>
-  <div>MD5 Message Digest Unit</div>
-  <span class="subtitle">ReadMe</span>
-</h1>
+## Compatibility
 
-<h2 id="description">
-  Description
-</h2>
+The unit requires Delphi 2009 and later. It has been tested with each version of Delphi 2009 to XE4.
 
-<p>
-  This unit contains an implementation of the MD5 message digest algorithm. It
-  is implemented as a Delphi Class named <var>TPJMD5</var>.
-</p>
+Both the Delphi 32 bit and 64 bit Windows compilers are supported.
 
-<p>
-  The code is developed from scratch based on the algorithm presented in <a
-    href="http://www.faqs.org/rfcs/rfc1321.html"
-  >RFC 1321</a>. Portions of the code are translated from the reference C code
-  supplied in the RFC. However the code is not a literal translation into Pascal
-  from the reference code.
-</p>
+The code is compatible with VCL and FireMonkey 2 applications.
 
-<p>
-  The algorithm and reference code are copyright &copy; 1991-2, RSA Data
-  Security, Inc. Created 1991. All rights reserved.
-</p>
+## Installation
 
-<p>
-  The unit is maintained as part of the <a
-    href="http://code.google.com/p/ddab-lib/"
-  >Delphi Dabbler Code Library</a> project on GoogleCode.
-</p>
+The MD5 Message Digest Unit, documentation and test suite are supplied in a zip file. Before installing you need to extract all the files, preserving the directory structure. The following files will be extracted:
 
-<h2 id="docs">
-  Documentation
-</h2>
+* **`PJMD5.pas`** – The source code.
+* `README.md` – The unit's read-me file.
+* `CHANGELOG.md` – The unit's change log.
+* `Documentation.URL` – Short-cut to the online documentation.
+* `LICENSE` – The project's license.
+* `MPL-2.txt` – Mozilla Public License v2.0.
+* `MD5-Notice.txt` – MD5 algorithm licensing notice.
 
-<p>
-  The unit is documented <a
-    href="http://www.delphidabbler.com/url/md5-docs"
-  >online</a>.
-</p>
+In addition to the above files you will find the _DUnit_ tests for `PJMD5.pas` in the `Test` sub-directory.
 
-<p>
-  There is no help file.
-</p>
+There are four possible ways to use the unit.
 
-<h2 id="compatibility">
-  Compatibility
-</h2>
+1. The simplest way is to add `PJMD5.pas` to your projects as you need it.
+2. To make the unit easier to re-use you can either copy it to a folder on your Delphi search path, or add the folder where you extracted the unit to the Delphi Search path. You then simply use the unit as required without needing to add it to your project.
+3. For maximum portability you can add the unit to a Delphi 32 bit or 64 bit Windows package. If you need help doing this [see here](https://delphidabbler.com/url/install-comp).
+4. If you use Git you can add the [`ddablib/md5`](https://github.com/ddablib/md5) GitHub repository as a Git submodule and add it to your project. Obviously, it's safer if you fork the repo and use your copy, just in case `ddablib/md5` ever goes away.
 
-<p>
-  The unit requires Delphi 2009 and later. It has been tested with each version
-  of Delphi 2009 to XE4.
-</p>
+## Update History
 
-<p>
-  Both the Delphi 32 bit and 64 bit Windows compilers are supported.
-</p>
+A complete change log is provided in [`CHANGELOG.md`](https://github.com/ddablib/md5/blob/main/CHANGELOG.md) that is included in the download.
 
-<p>
-  The code is compatible with VCL and FireMonkey 2 applications.
-</p>
+## License and Acknowledgements
 
-<h2 id="installation">
-  Installation
-</h2>
+Please see the file [`LICENSE`](https://raw.githubusercontent.com/ddablib/md5/md5/blob/main/LICENSE) for details.
 
-<p>
-  The MD5 Message Digest Unit, documentation and test suite are supplied in a
-  zip file. Before installing you need to extract all the files, preserving the
-  directory structure. The following files will be extracted:
-</p>
+## Bugs and Feature Requests
 
-<ul>
-  <li>
-    <code><strong>PJMD5.pas</strong></code> &ndash; The source code.
-  </li>
-  <li>
-    <code>ReadMe.htm</code> &ndash; The unit's read-me file.
-  </li>
-  <li>
-    <code>ChangeLog.txt</code> &ndash; The unit's change log.
-  </li>
-  <li>
-    <code>Documentation.URL</code> &ndash; Short-cut to the online
-    documentation.
-  </li>
-  <li>
-    <code>License.txt</code> &ndash; The project's license.
-  </li>
-  <li>
-    <code>MPL-2.txt</code> &ndash; Mozilla Public License v2.0.
-  </li>
-  <li>
-    <code>MD5-Notice.txt</code> &ndash; MD5 algorithm licensing notice.
-  </li>
-</ul>
+Bugs can be reported or new features requested via the project's [Issue Tracker](https://github.com/ddablib/md5/issues). A GitHub account is required.
 
-<p>
-  In addition to the above files you will find the <em>DUnit</em> tests for
-  <code>PJMD5.pas</code> in the <code>Test</code> sub-directory.
-</p>
+Please check if an issue has already been created for a similar report or request. If so then please add a comment containing as much information as you can to the existing issue, or if you've nothing to add, just add a :+1: (`:+1:`) comment. If there is no suitable existing issue then please add a new issue and give as much information as possible.
 
-<p>
-  There are three possible ways to use the unit.
-</p>
+## About the Author
 
-<ol class="spaced">
-  <li>
-    The simplest way is to add <code>PJMD5.pas</code> to your projects as you
-    need it.
-  </li>
-  <li>
-    To make the unit easier to re-use you can either copy it to a folder on your
-    Delphi search path, or add the folder where you extracted the unit to the
-    Delphi Search path. You then simply use the unit as required without needing
-    to add it to your project.
-  </li>
-  <li>
-    For maximum portability you can add the unit to a Delphi 32 bit or 64 bit
-    Windows package. If you need help doing this <a
-      href="http://www.delphidabbler.com/url/install-comp"
-    >see here</a>.
-  </li>
-</ol>
+I'm Peter Johnson – a hobbyist programmer living in Ceredigion in West Wales, UK, writing mainly in Delphi. My programs and other library code are available from: [https://delphidabbler.com/](https://delphidabbler.com/).
 
-<h2 id="update">
-  Update History
-</h2>
-
-<p>
-  A complete change log is provided in the file <code>ChangeLog.txt</code> that
-  is included in the download.
-</p>
-
-<h2 id="license">
-  License and Acknowledgements
-</h2>
-
-<p>
-  Please see the file <code>License.txt</code> for details.
-</p>
-
-<h2 id="bugs">
-  Bugs and Feature Requests
-</h2>
-
-<p>
-  Bugs can be reported or new features requested via the <a
-    href="http://www.delphidabbler.com/url/ddlib-issues"
-  >Issue Tracker</a>.
-</p>
-
-<p>
-  If no similar report or request has been recorded already, use the <em>New
-  Issue</em> link to add a new issue. Please select the most appropriate
-  template from the <em>Templates</em> drop down list.
-</p>
-
-<p>
-  Please change the <code>Project-unspecified</code> label to
-  <code>Project-md5</code>.
-</p>
-
-<h2 id="author">
-  About the Author
-</h2>
-
-<p>
-  I'm Peter Johnson &ndash; a hobbyist programmer living in Ceredigion in West
-  Wales, UK, writing write mainly in Delphi. My programs and code are available
-  from <a
-    href="http://www.delphidabbler.com/"
-  >http://www.delphidabbler.com/</a>.
-</p>
-
-<p>
-  I can be <a
-    href="http://www.delphidabbler.com/contact"
-  >contacted via the website</a>.
-</p>
-
-<div class="endnotes">
-
-  <div class="comments">
-    Please <a
-      href="http://www.delphidabbler.com/contact"
-    >let me know</a> if you have any comments about the classes, but please use
-    the Issue Tracker above to report bugs and request new features.
-  </div>
-
-  <div class="copyright">
-    This document is copyright &copy; 2010-2014, P D Johnson, <a
-      href="http://www.delphidabbler.com/"
-    >www.delphidabbler.com</a>.
-  </div>
-
-</div>
-
-</body>
-
-</html>
+This document is copyright © 2010-2022, [P D Johnson](https://gravatar.com/delphidabbler).
