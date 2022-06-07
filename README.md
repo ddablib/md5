@@ -4,7 +4,7 @@
 
 This unit contains an implementation of the MD5 message digest algorithm. It is implemented as a Delphi Class named _TPJMD5_.
 
-The code is developed from scratch based on the algorithm presented in [RFC 1321](http://www.faqs.org/rfcs/rfc1321.html). Portions of the code are translated from the reference C code supplied in the RFC. However the code is not a literal translation into Pascal from the reference code.
+The code is developed from scratch based on the algorithm presented in [RFC 1321](https://www.rfc-editor.org/rfc/rfc1321.html). Portions of the code are translated from the reference C code supplied in the RFC. However the code is not a literal translation into Pascal from the reference code.
 
 The algorithm and reference code are copyright © 1991-2, RSA Data Security, Inc. Created 1991. All rights reserved.
 
@@ -45,7 +45,7 @@ A complete change log is provided in [`CHANGELOG.md`](https://github.com/ddablib
 
 ## License and Acknowledgements
 
-Please see the file [`LICENSE`](https://raw.githubusercontent.com/ddablib/md5/md5/blob/main/LICENSE) for details.
+Please see the file [`LICENSE`](https://raw.githubusercontent.com/ddablib/md5/main/LICENSE) for details.
 
 ## Bugs and Feature Requests
 
