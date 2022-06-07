@@ -1,0 +1,13 @@
+This Product, the DelphiDabbler MD5 Message Digest Unit, is derived from the
+RSA Data Security, Inc. MD5 Message-Digest Algorithm. The copyright notice is
+included in this project's documentation. The notice must be included with any
+redistribution of this work or any derived work.
+
+The MD5 Message Digest Unit is released under the terms of the Mozilla Public
+License Version v2.0. A copy of the license is included with the unit and may
+also be obtained from https://www.mozilla.org/MPL/2.0/.
+
+The unit is copyright (c) 2010-2022, Peter D Johnson,
+https://gravatar.com/delphidabbler.
+
+All relevant trademarks are acknowledged.
